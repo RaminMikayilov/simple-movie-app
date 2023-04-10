@@ -1,10 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import Home from "./pages/Home";
 
 const App = () => {
-  const { name } = useSelector((state) => state.movie);
-  
-  return <div>{name}</div>;
+  return (
+    <div className="bg-cBlue">
+      <Home />
+    </div>
+  );
 };
 
 export default App;
