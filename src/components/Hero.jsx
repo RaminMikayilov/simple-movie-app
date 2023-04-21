@@ -22,13 +22,13 @@ const Hero = () => {
     <div className="w-full h-[500px] relative">
       <Navbar />
       <div className="w-full h-full">
-        <div className="bg-gradient-to-r from-cBlue absolute w-full h-full"></div> 
+        <div className="bg-gradient-to-r from-cCard absolute w-full h-full"></div> 
         <img
           src={`https://image.tmdb.org/t/p/original${randomPopular?.backdrop_path}`}
           alt="hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute top-0 left-0 text-white flex flex-col justify-center items-start h-full p-8 gap-5 w-2/3">
+        <div className="absolute top-0 left-0 text-white flex flex-col justify-center items-start h-full p-8 gap-5 w-2/3 px-32">
           <h1 className="text-2xl font-bold">{randomPopular?.title}</h1>
           <p>{randomPopular?.overview}</p>
           <button className="bg-cRose rounded-md py-2 px-4 flex items-center gap-2">

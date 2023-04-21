@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         cRose: "#BE123C",
-        cBlue: '#001E3C',
-        cCard: '#132F4C',
+        cBlue: "#001E3C",
+        cCard: "#132F4C",
+        cYellow: "rgb(245,197,24)",
       },
     },
   },
