@@ -5,6 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const MovieCard = (movie) => {
   const { title, poster_path, vote_average, release_date } = movie;
+  
   return (
     <div className="inline-block w-[200px] h-[470px] rounded-sm bg-cCard shadow-md shadow-cRose/20">
       <img
