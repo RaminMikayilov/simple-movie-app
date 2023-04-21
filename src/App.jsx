@@ -24,7 +24,11 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="bg-cBlue min-h-screen">
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;
