@@ -15,7 +15,6 @@ const Hero = () => {
   }, []);
 
   const randomPopular = popularMovies[Math.floor(Math.random() * popularMovies.length)];
-  console.log(randomPopular);
 
   return (
     <div className="w-full h-[500px] relative">

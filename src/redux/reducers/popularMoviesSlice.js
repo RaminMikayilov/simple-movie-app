@@ -12,7 +12,7 @@ const initialState = {
 };
 
 const popularMoviesSlice = createSlice({
-  name: "movie",
+  name: "popular",
   initialState,
   reducers: {},
   extraReducers: {
