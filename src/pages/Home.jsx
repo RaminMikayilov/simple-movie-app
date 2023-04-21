@@ -4,6 +4,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import PopularMovies from "../components/PopularMovies";
 import TopRatedMovies from "../components/TopRatedMovies";
+import LatestMovies from "../components/LatestMovies";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
       <PopularMovies />
       <TopRatedMovies />
+      <LatestMovies />
     </>
   );
 };
