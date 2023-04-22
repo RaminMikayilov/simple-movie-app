@@ -3,6 +3,7 @@ import React from "react";
 //import components
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
+import SingleMovie from "./pages/SingleMovie";
 
 import {
   RouterProvider,
@@ -16,8 +17,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route index element={<Home />} />
+      <Route path="/movies/:id" element={<SingleMovie />} />
       <Route path="/favorites" element={<Favorites />} />
-      {/* <Route path="/movies/:id" element={<SingleMovie />} /> */}
       {/* <Route path="*" element={<Error />} /> */}
     </Route>
   )

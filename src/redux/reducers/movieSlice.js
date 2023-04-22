@@ -8,7 +8,6 @@ const movieSlice = createSlice({
   name: "movie",
   initialState,
   reducers: {},
-  extraReducers: {},
 });
 
 export default movieSlice.reducer;

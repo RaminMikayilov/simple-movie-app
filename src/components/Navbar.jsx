@@ -11,16 +11,16 @@ const Navbar = () => {
       <Link to="/">
         <div className="cursor-pointer font-bold flex items-center gap-2 duration-150 hover:opacity-80">
           <span className="bg-cRose p-2 rounded-full">
-            <BiMoviePlay />
+            <BiMoviePlay size={22} />
           </span>
           <span>MOVIE</span>
-        </div>{" "}
+        </div>
       </Link>
       <Link to="/favorites">
-        <div className="flex items-center gap-2 cursor-pointer duration-150 hover:opacity-80">
+        <div className="flex font-bold items-center gap-2 cursor-pointer duration-150 hover:opacity-80">
           <span>Favorites</span>
           <span className="bg-cRose p-2 rounded-full">
-            <MdFavorite />
+            <MdFavorite size={22} />
           </span>
         </div>
       </Link>

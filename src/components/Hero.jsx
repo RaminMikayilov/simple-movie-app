@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 //icons
 import { BiLinkExternal } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const dispatch = useDispatch();
@@ -29,10 +30,12 @@ const Hero = () => {
         <div className="absolute top-0 left-0 text-white flex flex-col justify-center items-start h-full p-8 gap-5 w-2/3 px-32">
           <h1 className="text-4xl font-bold">{randomPopular?.title}</h1>
           <p>{randomPopular?.overview}</p>
-          <button className="bg-cRose rounded-md py-2 px-4 flex items-center gap-2">
+          <Link to={`movies/${randomPopular?.id}`}>
+          <button className="bg-cRose rounded-md py-2 px-4 flex items-center gap-2 hover:opacity-80">
             Details
             <BiLinkExternal />
           </button>
+          </Link>
         </div>
       </div>
     </div>
