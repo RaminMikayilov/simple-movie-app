@@ -4,6 +4,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import SingleMovie from "./pages/SingleMovie";
+import Error from "./pages/Error";
 
 import {
   RouterProvider,
@@ -19,7 +20,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/movies/:id" element={<SingleMovie />} />
       <Route path="/favorites" element={<Favorites />} />
-      {/* <Route path="*" element={<Error />} /> */}
+      <Route path="*" element={<Error />} />
     </Route>
   )
 );
