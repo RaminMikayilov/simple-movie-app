@@ -4,11 +4,12 @@ import { apiUrls } from "../../utils/API/apiUrls";
 export const fetchLatest = createAsyncThunk("fetch latest", async () => {
   const response = await fetch(apiUrls.latest);
   const data = await response.json();
-  return data.results;  
+  return data.results;
 });
 
 const initialState = {
   latestMovies: [],
+  isLoading: false,
 };
 
 const latestMoviesSlice = createSlice({
@@ -17,14 +18,14 @@ const latestMoviesSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchLatest.pending]: (state) => {
-      console.log("pending");
+      state.isLoading = true;
     },
     [fetchLatest.fulfilled]: (state, action) => {
-      console.log("fulfilled");
+      state.isLoading = false;
       state.latestMovies = action.payload;
     },
     [fetchLatest.rejected]: (state) => {
-      console.log("rejected");
+      state.isLoading = false;
     },
   },
 });

@@ -12,8 +12,6 @@ const MovieCard = (movie) => {
   const [favorite, setFavorite] = useState(false);
 
   const dispatch = useDispatch();
-  const { favorites } = useSelector((state) => state.movie);
-  console.log(favorites);
 
   return (
     <div className="inline-block w-[200px] h-[470px] rounded-sm bg-cCard shadow-md shadow-cRose/20 duration-300 relative">

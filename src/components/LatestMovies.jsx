@@ -5,16 +5,18 @@ import { fetchLatest } from "../redux/reducers/latestMoviesSlice";
 // components
 import Carousel from "./Carousel";
 import MovieCard from "./MovieCard";
+import CategoryLoading from "./Loading/CategoryLoading";
 
 const LatestMovies = () => {
   const dispatch = useDispatch();
   const { latestMovies } = useSelector((state) => state.latestMovies);
+  const { isLoading } = useSelector((state) => state.latestMovies);
 
   useEffect(() => {
     dispatch(fetchLatest());
   }, []);
 
-  console.log(latestMovies);
+  if (isLoading) return <CategoryLoading />;
 
   return (
     <div className="text-white py-16 px-28">

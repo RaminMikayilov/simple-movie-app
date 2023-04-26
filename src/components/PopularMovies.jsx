@@ -2,10 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Carousel from "./Carousel";
 import MovieCard from "./MovieCard";
+import CategoryLoading from "./Loading/CategoryLoading";
 
 const PopularMovies = () => {
   const { popularMovies } = useSelector((state) => state.popularMovies);
   // I dont fetch popular again because of I fetched it in the Hero component
+
+  const { isLoading } = useSelector((state) => state.popularMovies);
+
+  if (isLoading) return <CategoryLoading />;
 
   return (
     <div className="text-white py-16 pt-24 px-28">

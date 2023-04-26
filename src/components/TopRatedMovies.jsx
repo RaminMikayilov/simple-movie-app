@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {fetchTopRated} from '../redux/reducers/topRatedMoviesSlice'
+import { fetchTopRated } from "../redux/reducers/topRatedMoviesSlice";
 
 // components
 import Carousel from "./Carousel";
 import MovieCard from "./MovieCard";
+import CategoryLaoding from "./Loading/CategoryLoading";
 
 const TopRatedMovies = () => {
   const dispatch = useDispatch();
   const { topRatedMovies } = useSelector((state) => state.topRatedMovies);
-  
+  const {isLoading} = useSelector((state) => state.topRatedMovies);
+
   useEffect(() => {
     dispatch(fetchTopRated());
   }, []);
+
+  if(isLoading) return <CategoryLaoding />
 
   return (
     <div className="text-white py-16 px-28">

@@ -9,6 +9,7 @@ export const fetchTopRated = createAsyncThunk("fetch topRated", async () => {
 
 const initialState = {
   topRatedMovies: [],
+  isLoading: false,
 };
 
 const topRatedMoviesSlice = createSlice({
@@ -17,14 +18,14 @@ const topRatedMoviesSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchTopRated.pending]: (state) => {
-      console.log("pending");
+      state.isLoading = true;
     },
     [fetchTopRated.fulfilled]: (state, action) => {
-      console.log("fulfilled");
+      state.isLoading = false;
       state.topRatedMovies = action.payload;
     },
     [fetchTopRated.rejected]: (state) => {
-      console.log("rejected");
+      state.isLoading = false;
     },
   },
 });
