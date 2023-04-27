@@ -20,7 +20,7 @@ const MovieCard = (movie) => {
         className="absolute right-2 top-2 bg-white/60 text-cRose rounded-full p-1 z-[15] hover:bg-white/100 cursor-pointer"
         onClick={() => {
           dispatch(toggleFavorite(movie));
-          setFavorite(true);
+          setFavorite(!favorite);
         }}
       >
         {movie.isFavorite || favorite ? (
