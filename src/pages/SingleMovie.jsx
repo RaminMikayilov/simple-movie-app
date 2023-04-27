@@ -16,7 +16,6 @@ const SingleMovie = () => {
   const data = [...popularMovies, ...topRatedMovies, ...latestMovies];
 
   const movie = data.find((movie) => movie.id == id);
-  console.log(movie);
 
   return (
     <div className="text-white h-screen w-screen">

@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 import { useSelector } from "react-redux";
 
 const Favorites = () => {
-  const { favorites } = useSelector((state) => state.movie);
+  const { favorites } = useSelector((state) => state.favoriteMovies);
 
   return (
     <>

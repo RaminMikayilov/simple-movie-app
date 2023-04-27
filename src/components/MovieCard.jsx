@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../redux/reducers/movieSlice";
+import { toggleFavorite } from "../redux/reducers/favoriteMoviesSlice";
 
 //icons
 import { AiFillStar, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const MovieCard = (movie) => {
   const { id, title, poster_path, vote_average, release_date } = movie;
-  const [favorite, setFavorite] = useState(false);
+  console.log(movie);
 
   const dispatch = useDispatch();
 
@@ -19,13 +19,14 @@ const MovieCard = (movie) => {
       <span
         className="absolute right-2 top-2 bg-white/60 text-cRose rounded-full p-1 z-[15] hover:bg-white/100 cursor-pointer"
         onClick={() => {
-          setFavorite(!favorite);
-          !favorite
-            ? dispatch(addFavorite(movie))
-            : dispatch(removeFavorite(movie));
+          dispatch(toggleFavorite(movie));
         }}
       >
-        {favorite ? <AiFillHeart size={25} /> : <AiOutlineHeart size={25} />}
+        {movie.isFavorite ? (
+          <AiFillHeart size={25} />
+        ) : (
+          <AiOutlineHeart size={25} />
+        )}
       </span>
 
       <img
@@ -34,7 +35,7 @@ const MovieCard = (movie) => {
         className="rounded-r-sm rounded-l-sm w-full"
       />
       {/* card body */}
-      <Link to={`movies/${id}`}>
+      <Link to={`/movies/${id}`}>
         <div className="p-3 space-y-2 w-full cursor-pointer hover:opacity-60 duration-300">
           <p className="text-cYellow font-medium py-1">{release_date}</p>
           <h1 className="text-white font-bold text-lg w-full whitespace-normal h-[60px]">
