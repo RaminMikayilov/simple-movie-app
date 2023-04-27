@@ -28,14 +28,16 @@ const SingleMovie = () => {
       />
       {/* body */}
       <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center">
-        <div className="md:w-2/3 w-full flex p-3">
+        <div className="md:w-[95%] lg:w-[80%] xl:w-[70%] w-full h-full flex flex-col md:flex-row md:p-3  items-center ">
           <img
             src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
             alt={movie?.title}
-            className="w-1/2 max-h-[500px] object-cover rounded-md shadow-lg"
+            className="w-full h-1/2 md:w-1/3 lg:w-1/2 max-h-[500px] object-cover md:rounded-md rounded-b-lg shadow-lg"
           />
           <div className="px-5">
-            <h1 className="text-4xl font-bold py-3">{movie?.title}</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold py-3">
+              {movie?.title}
+            </h1>
             <p className="py-3 text-cyan-200">
               <span className="font-semibold text-xl">Release date:</span>{" "}
               {movie?.release_date}
@@ -47,7 +49,9 @@ const SingleMovie = () => {
             </p>
             <div>
               <h3 className="font-bold text-xl py-2">Overview</h3>
-              <p className="text-cyan-200">{movie?.overview}</p>
+              <p className="text-cyan-200 text-[13px] sm:text-[14px] md:text-[16px] lg:text-[17px]">
+                {movie?.overview}
+              </p>
             </div>
           </div>
         </div>

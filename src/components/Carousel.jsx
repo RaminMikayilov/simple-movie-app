@@ -8,12 +8,10 @@ const Carousel = ({ children }) => {
 
   const scrollRef = useRef(null);
   const scrollLeft = () => {
-    console.log("left");
     scrollRef.current.scrollLeft -= 500;
   };
 
   const scrollRight = () => {
-    console.log("right");
     scrollRef.current.scrollLeft += 500;
   };
 
@@ -21,7 +19,7 @@ const Carousel = ({ children }) => {
     <div className="flex items-center relative">
       <span
         onClick={scrollLeft}
-        className="border-4 p-2 bg-cBlue bg-opacity-50 rounded-full cursor-pointer hover:text-cYellow hover:border-cYellow duration-300 absolute left-0 z-[10]"
+        className="border-4 p-2 bg-cBlue bg-opacity-50 rounded-full cursor-pointer hover:text-cYellow hover:border-cYellow duration-300 absolute left-0 z-[10] hidden md:block"
       >
         <MdChevronLeft size={40} />
       </span>
@@ -30,7 +28,7 @@ const Carousel = ({ children }) => {
       </div>
       <span
         onClick={scrollRight}
-        className="bg-cBlue bg-opacity-50 border-4 p-2 rounded-full cursor-pointer hover:text-cYellow hover:border-cYellow duration-300 absolute right-0 z-[10]"
+        className="bg-cBlue bg-opacity-50 border-4 p-2 rounded-full cursor-pointer hover:text-cYellow hover:border-cYellow duration-300 absolute right-0 z-[10] hidden md:block"
       >
         <MdChevronRight size={40} />
       </span>
