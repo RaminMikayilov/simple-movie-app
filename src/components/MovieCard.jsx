@@ -9,9 +9,9 @@ import { AiFillStar, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const MovieCard = (movie) => {
   const { id, title, poster_path, vote_average, release_date } = movie;
-  console.log(movie);
 
   const dispatch = useDispatch();
+  const [favorite, setFavorite] = useState(false);
 
   return (
     <div className="inline-block w-[200px] h-[470px] rounded-sm bg-cCard shadow-md shadow-cRose/20 duration-300 relative">
@@ -20,9 +20,10 @@ const MovieCard = (movie) => {
         className="absolute right-2 top-2 bg-white/60 text-cRose rounded-full p-1 z-[15] hover:bg-white/100 cursor-pointer"
         onClick={() => {
           dispatch(toggleFavorite(movie));
+          setFavorite(true);
         }}
       >
-        {movie.isFavorite ? (
+        {movie.isFavorite || favorite ? (
           <AiFillHeart size={25} />
         ) : (
           <AiOutlineHeart size={25} />
