@@ -23,7 +23,7 @@ const Hero = () => {
   if (isLoading) return <HeroLoading />;
 
   return (
-    <div className="w-full h-screen sm:max-h-screen sm:h-[496px] md:h-[500px] lg:h-[550px] xl:h-[600px] relative">
+    <div className="w-full h-[600px] max-h-screen md:h-screen relative">
       <Navbar />
       <div className="w-full h-full">
         <div className="md:bg-gradient-to-r md:from-cCard bg-gradient-to-tr from-cCard absolute w-full h-full"></div>
