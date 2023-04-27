@@ -2,6 +2,8 @@
 
 This is a simple Movie App that is built using React and makes use of the [TMDB API](https://www.themoviedb.org/documentation/api).
 
+![Movie App](./src/assets/images/screenshot.png)
+
 ## Features
 
 1. MovieList: Displays a list of movies(popular, top rated, latest).
