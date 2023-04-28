@@ -1,4 +1,4 @@
-# Movie App
+# Movie App - [Live Link](https://rm-movieapp.netlify.app/) :point_left: 
 
 This is a simple Movie App that is built using React and makes use of the [TMDB API](https://www.themoviedb.org/documentation/api).
 
