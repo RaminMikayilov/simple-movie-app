@@ -9,8 +9,7 @@ import CategoryLoading from "./Loading/CategoryLoading";
 
 const TopRatedMovies = () => {
   const dispatch = useDispatch();
-  const { topRatedMovies } = useSelector((state) => state.topRatedMovies);
-  const {isLoading} = useSelector((state) => state.topRatedMovies);
+  const { topRatedMovies, isLoading } = useSelector((state) => state.topRatedMovies);
 
   useEffect(() => {
     dispatch(fetchTopRated());

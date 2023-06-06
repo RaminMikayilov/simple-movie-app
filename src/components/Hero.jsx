@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="md:bg-gradient-to-r md:from-cCard bg-gradient-to-tr from-cCard absolute w-full h-full"></div>
         <img
           src={`https://image.tmdb.org/t/p/original${randomPopular?.backdrop_path}`}
-          alt="hero"
+          alt={randomPopular?.title || "Hero"}
           className="w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 text-white flex flex-col justify-center items-start h-full xl:gap-10 lg:gap-8 lg:px-28 lg:w-3/4 xl:px-32 xl:w-2/3 md:px-20 md:gap-5 md:w-[70%] sm:px-10 sm:w-[80%] gap-4 px-8">

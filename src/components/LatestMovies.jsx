@@ -9,8 +9,9 @@ import CategoryLoading from "./Loading/CategoryLoading";
 
 const LatestMovies = () => {
   const dispatch = useDispatch();
-  const { latestMovies } = useSelector((state) => state.latestMovies);
-  const { isLoading } = useSelector((state) => state.latestMovies);
+  const { latestMovies, isLoading } = useSelector(
+    (state) => state.latestMovies
+  );
 
   useEffect(() => {
     dispatch(fetchLatest());

@@ -5,10 +5,10 @@ import MovieCard from "./MovieCard";
 import CategoryLoading from "./Loading/CategoryLoading";
 
 const PopularMovies = () => {
-  const { popularMovies } = useSelector((state) => state.popularMovies);
+  const { popularMovies, isLoading } = useSelector(
+    (state) => state.popularMovies
+  );
   // I dont fetch popular again because of I fetched it in the Hero component
-
-  const { isLoading } = useSelector((state) => state.popularMovies);
 
   if (isLoading) return <CategoryLoading />;
 

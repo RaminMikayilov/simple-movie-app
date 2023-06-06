@@ -1,4 +1,4 @@
-const apiKey = import.meta.env.VITE_API_KEY;
+export const apiKey = import.meta.env.VITE_API_KEY;
 
 export const apiUrls = {
   popular: `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`,
