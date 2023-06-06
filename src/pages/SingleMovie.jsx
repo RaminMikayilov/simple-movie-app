@@ -19,7 +19,7 @@ const SingleMovie = () => {
     dispatch(fetchSingleMovie(id));
   }, [id]);
 
-  if(isLoading) <div className="text-white text-xl">Loading ...</div>
+  if (isLoading) return <div className="text-white text-xl">Loading ...</div>;
   return (
     <div className="text-white h-screen w-screen">
       <Navbar />
