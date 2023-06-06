@@ -9,6 +9,7 @@ This is a simple Movie App that is built using React and makes use of the [TMDB 
 1. MovieList: Displays a list of movies(popular, top rated, latest).
 2. MovieDetails: Displays details of a movie.
 3. Favorites: Displays a list of favorite movies.
+4. Search: Search for movies.
 
 ## Installation
 

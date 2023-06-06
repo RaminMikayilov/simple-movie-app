@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import SingleMovie from "./pages/SingleMovie";
 import Error from "./pages/Error";
+import Search from "./pages/Search";
 
 import {
   RouterProvider,
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/movies/:id" element={<SingleMovie />} />
       <Route path="/favorites" element={<Favorites />} />
+      <Route path="/search/:query" element={<Search />} />
       <Route path="*" element={<Error />} />
     </Route>
   )
