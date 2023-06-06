@@ -41,7 +41,7 @@ const MovieCard = (movie) => {
         <div className="p-3 space-y-2 w-full cursor-pointer">
           <p className="text-cYellow font-medium py-1">{release_date}</p>
           <h1 className="text-white font-bold text-lg w-full whitespace-normal h-[60px]">
-            {title}
+            {title.length > 30 ? `${title.slice(0, 30)}...` : title}
           </h1>
           <div className="flex items-center space-x-1">
             <AiFillStar size={23} className="text-cYellow" />
