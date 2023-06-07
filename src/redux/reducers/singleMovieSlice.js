@@ -8,7 +8,7 @@ export const fetchSingleMovie = createAsyncThunk(
       `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`
     );
     const data = await response.json();
-    return data.results;
+    return data;
   }
 );
 

@@ -39,7 +39,7 @@ const Hero = () => {
           <p className="xl:text-lg md:text-sm sm:text-[12px] text-[12px] font-normal md:font-medium">
             {randomPopular?.overview}
           </p>
-          <Link to={`movies/${randomPopular?.id}`}>
+          <Link to={`movie/${randomPopular?.id}`}>
             <button className="bg-cRose rounded-md py-2 px-4 flex items-center gap-2 hover:opacity-80">
               Details
               <BiLinkExternal />

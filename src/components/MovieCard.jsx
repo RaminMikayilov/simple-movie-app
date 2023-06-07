@@ -15,7 +15,7 @@ const MovieCard = (movie) => {
 
   return (
     <Link
-      to={`/movies/${id}`}
+      to={`/movie/${id}`}
       className="inline-block w-[200px] h-[470px] rounded-sm bg-cCard shadow-md shadow-cRose/20 relative hover:opacity-60 duration-300"
     >
       {/* favorite */}

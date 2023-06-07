@@ -19,6 +19,8 @@ const SingleMovie = () => {
     dispatch(fetchSingleMovie(id));
   }, [id]);
 
+  console.log(singleMovie);
+
   if (isLoading) return <div className="text-white text-xl">Loading ...</div>;
   return (
     <div className="text-white h-screen w-screen">
